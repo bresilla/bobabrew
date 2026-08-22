@@ -114,7 +114,7 @@ when defined(posix):
     FD_SET(fd, fds)
     var tv: Timeval
     tv.tv_sec = posix.Time(timeoutMs div 1000)
-    tv.tv_usec = clong((timeoutMs mod 1000) * 1000)
+    tv.tv_usec = Suseconds((timeoutMs mod 1000) * 1000)
     let r = select(cint(fd + 1), addr fds, nil, nil, addr tv)
     if r <= 0: return (@[], false)   # timeout
     var buf: array[2048, byte]
