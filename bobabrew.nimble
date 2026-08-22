@@ -2,11 +2,9 @@
 
 version       = "0.1.0"
 author        = "Trim Bresilla"
-description   = "bobabrew"
+description   = "Bubble Tea-style TUI toolkit for Nim"
 license       = "MIT"
 srcDir        = "src"
-binDir        = "bin"
-bin           = @["bobabrew"]
 
 requires "nim >= 2.2.0"
 
